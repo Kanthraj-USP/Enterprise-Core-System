@@ -1,0 +1,47 @@
+//Login Page styling
+
+#login{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend.position-relative;
+    @extend.text-center;
+
+.login-box{
+    max-width: 960px;
+    margin: 0 auto;
+    box-shadow: 0 035px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+/*login form styling*/
+.form-section{
+    @extend.text-center;
+    max-width:400px;
+    margin:0 auto;
+    @extend.width-100;
+
+    >.title{
+        margin: 10px 0 50px 0;
+
+        >h3{
+            font-size: 25px;
+            @extend.font-bold;
+            color: #505050;
+        }
+    }
+
+    .login-inner-form{
+        @extend.position-relative;
+        color: #979797;
+
+        .form-box{
+            float: right;
+            @extend.width-100;
+            @extend.position-relative;
+        }
+    }
+}
+
+}

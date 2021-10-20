@@ -1,0 +1,27 @@
+ALTER TABLE `usp_ecs`.`user` 
+ADD CONSTRAINT `Modifiedbyid`
+  FOREIGN KEY (`Id`)
+  REFERENCES `usp_ecs`.`user` (`LastModifiedById`)
+  ON DELETE cascade
+  ON UPDATE cascade;
+  
+  ALTER TABLE `usp_ecs`.`userlicense` 
+ADD CONSTRAINT `registryid`
+  FOREIGN KEY (`ID`)
+  REFERENCES `usp_ecs`.`registry` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+  
+  ALTER TABLE `usp_ecs`.`features` 
+ADD CONSTRAINT `editionid `
+  FOREIGN KEY (`Id`)
+  REFERENCES `usp_ecs`.`edition` (`idedition`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+  
+  ALTER TABLE `usp_ecs`.`registry` 
+ADD CONSTRAINT `id`
+  FOREIGN KEY (`id`)
+  REFERENCES `usp_ecs`.`features` (`Id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
